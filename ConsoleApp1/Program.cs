@@ -9,7 +9,10 @@ namespace HelloWorld
     {
       static void Main (String[] args) 
       {
-        Console.WriteLine("Hello, World! ");
+        int number = 45;
+        int number1 = 46;
+        Console.WriteLine("Hello, World!" , number+number1);
+        Console.WriteLine(number1+number);
       }
     }
 }
