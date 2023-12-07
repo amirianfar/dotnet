@@ -1,18 +1,49 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
 
-
-
-namespace HelloWorld
+class ReadWriteInt
 {
 
-    class Program 
-    {
-      static void Main (String[] args) 
+
+  static int minValueMethod(int[] allages)
+  {
+ int minValue = allages[0];
+    for (int i=0;i<allages.Length;i++){
+      if (allages[i]<minValue)
       {
-        int number = 45;
-        int number1 = 46;
-        Console.WriteLine("Hello, World!" , number+number1);
-        Console.WriteLine(number1+number);
+        minValue = allages[i];
       }
+       
     }
+    return minValue;
+
+  }
+    static void Main(string[] args)
+    {
+
+      int[] allages = {10,10,10};
+           
+    for (int i = 0; i<allages.Length ; i++)
+      {     
+        // Prompt the user to enter an integer
+        Console.WriteLine("Enter an integer:");
+
+        // Read the user input as a string
+        string ages = Console.ReadLine();
+
+        // Check if the input can be parsed as an integer
+        if (int.TryParse(ages, out int number))
+        {
+            // Write the parsed integer to the console
+            Console.WriteLine($"The age you entered: {number}");
+            Console.WriteLine(allages[i] = number);
+        }
+        else
+        {
+            // Handle invalid input
+            Console.WriteLine("Invalid input. Please enter an integer.");
+        }
+    }
+   
+  Console.WriteLine("The smallest value in array is: " + minValueMethod(allages));
+}
 }
