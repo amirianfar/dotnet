@@ -5,9 +5,18 @@ class Program
 {
 
 
-Cars myObj = new Cars();
-Console.WriteLine(myObj.color);
-myObj.fullThrottle();
+Cars Ford = new Cars();
+Ford.Color="Blue";
+Console.WriteLine(Ford.Color);
+Ford.fullThrottle();
+
+Cars Bmw = new Cars();
+Bmw.Color="Orange";
+
+Console.WriteLine(Bmw.Color);
+Console.WriteLine(Ford.Color);
+
+
 
 }
 }
